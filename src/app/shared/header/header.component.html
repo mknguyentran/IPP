@@ -1,0 +1,8 @@
+<div class="container p-grid p-justify-between p-align-center p-col-nogutter">
+    <div class="logo cursor-pointer p-col-2">
+        <img src="../../../assets/image/logo.png" />
+    </div>
+    <div *ngFor="let field of headerFields">
+        <a class="headerLink" [routerLink]=field.routerLink>{{field.name | translate}}</a>
+    </div>
+</div>

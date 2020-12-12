@@ -1,0 +1,16 @@
+@import "src/theme/theme.scss";
+
+.container {
+  height: 60px;
+  width: 1200px;
+  margin: auto;
+  .logo {
+    height: 100%;
+    &:focus {
+      outline: 0;
+    }
+    img {
+      height: 100%;
+    }
+  }
+}

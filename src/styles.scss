@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./theme/theme.scss";
+
+* {
+  text-decoration: none;
+  font-family: $font-stack;
+  color: $black;
+}
+
+a {
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,32 @@
+@import "variables";
+
+.container {
+  padding-top: $header-height;
+  .header {
+    color: $bolder-primary-color;
+  }
+  .content {
+    width: $content-width;
+    margin: auto;
+    .slider {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      overflow-y: auto;
+      flex-wrap: nowrap;
+      scroll-snap-type: mandatory;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .review-box {
+        scroll-snap-align: end;
+        flex-shrink: 0;
+        width: 350px;
+        height: 327px;
+        margin-right: 75px;
+        border: $review-box-border;
+        border-radius: $review-box-border-radius;
+      }
+    }
+  }
+}

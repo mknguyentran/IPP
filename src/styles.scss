@@ -1,16 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
-@import "./theme/theme.scss";
+@import "variables";
 
 * {
   text-decoration: none;
   font-family: $font-stack;
   color: $black;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 a {
-  &:hover {
+  &.active {
     color: $primary-color;
   }
+  &:hover:not(.active) {
+    color: $primary-color;
+  }
+  transition: color 0.2s;
+}
+
+h1.header {
+  padding: 40px 0;
+  font-size: $font-size-header;
+  font-weight: $font-weight-semibold;
 }
 
 .cursor-pointer {

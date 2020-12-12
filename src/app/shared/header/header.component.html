@@ -2,7 +2,7 @@
     <div class="logo cursor-pointer p-col-2">
         <img src="../../../assets/image/logo.png" />
     </div>
-    <div *ngFor="let field of headerFields">
-        <a class="headerLink" [routerLink]=field.routerLink>{{field.name | translate}}</a>
+    <div *ngFor="let tab of headerTabs">
+        <a class="headerLink" routerLinkActive="active" [routerLink]=tab.routerLink>{{tab.name | translate}}</a>
     </div>
 </div>

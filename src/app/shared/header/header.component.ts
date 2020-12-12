@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { HeaderField, HEADER_FIELDS } from './header.const';
-import header from './header.json';
+import { Component, OnInit } from "@angular/core";
+import { HeaderTab, HEADER_TABS } from "./header.const";
+// import header from './header.json';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
-  headerFields: HeaderField[] = HEADER_FIELDS;
+  headerTabs: HeaderTab[] = HEADER_TABS;
+
   constructor() {}
 
   ngOnInit(): void {}

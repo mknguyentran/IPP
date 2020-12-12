@@ -1,8 +1,8 @@
-@import "src/theme/theme.scss";
+@import "variables";
 
 .container {
-  height: 60px;
-  width: 1200px;
+  height: $header-height;
+  width: $content-width;
   margin: auto;
   .logo {
     height: 100%;

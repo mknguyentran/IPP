@@ -1,31 +1,31 @@
-export const HEADER_FIELDS: HeaderField[] = [
+export const HEADER_TABS: HeaderTab[] = [
   {
-    name: 'aboutIPP',
-    routerLink: '/',
+    name: "aboutIPP",
+    routerLink: "/about",
   },
   {
-    name: 'ieltsCourses',
-    routerLink: '/',
+    name: "ieltsCourses",
+    routerLink: "/courses",
   },
   {
-    name: 'review',
-    routerLink: '/',
+    name: "review",
+    routerLink: "/review",
   },
   {
-    name: 'library',
-    routerLink: '/',
+    name: "library",
+    routerLink: "/library",
   },
   {
-    name: 'appoinment',
-    routerLink: '/',
+    name: "appoinment",
+    routerLink: "/apointment",
   },
   {
-    name: 'IPPSystem',
-    routerLink: '/',
+    name: "IPPSystem",
+    routerLink: "/system",
   },
 ];
 
-export interface HeaderField {
+export interface HeaderTab {
   name: string;
   routerLink: string;
 }

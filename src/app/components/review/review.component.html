@@ -1,13 +1,38 @@
 <div class="container">
-    <button></button>
-    <div class="content review">
+    <div class="content p-grid p-justify-center p-nogutter">
         <h1 class="header">{{"reviewHeader" | translate}}</h1>
-        <div class="slider p-col-12 p-grid" #slider id="slider">
-            <div class="review-box"></div>
-            <div class="review-box"></div>
-            <div class="review-box"></div>
-            <div class="review-box"></div>
-            <div class="review-box"></div>
+        <div class="p-grid p-align-center p-justify-between review">
+            <button class="round-nav-button white-round-nav-button" (click)="scrollLeft(reviewSlider)">
+                <fa-icon class="left-chevron" [icon]="chevronLeft"></fa-icon>
+            </button>
+            <div class="slider p-col-12 p-grid" #reviewSlider>
+                <div class="review-box"></div>
+                <div class="review-box"></div>
+                <div class="review-box"></div>
+                <div class="review-box"></div>
+                <div class="review-box"></div>
+            </div>
+            <button class="round-nav-button white-round-nav-button" (click)="scrollRight(reviewSlider)">
+                <fa-icon [icon]="chevronRight"></fa-icon>
+            </button>
+        </div>
+    </div>
+    <div class="content p-grid p-justify-center p-nogutter">
+        <h1 class="header">{{"achievementHeader" | translate}}</h1>
+        <div class="p-grid p-align-center p-justify-between review">
+            <button class="round-nav-button white-round-nav-button" (click)="scrollLeft(achievementSlider)">
+                <fa-icon class="left-chevron" [icon]="chevronLeft"></fa-icon>
+            </button>
+            <div class="slider p-col-12 p-grid" #achievementSlider>
+                <div class="review-box"></div>
+                <div class="review-box"></div>
+                <div class="review-box"></div>
+                <div class="review-box"></div>
+                <div class="review-box"></div>
+            </div>
+            <button class="round-nav-button white-round-nav-button" (click)="scrollRight(achievementSlider)">
+                <fa-icon [icon]="chevronRight"></fa-icon>
+            </button>
         </div>
     </div>
 </div>

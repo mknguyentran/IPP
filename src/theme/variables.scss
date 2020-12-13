@@ -16,7 +16,16 @@ $black: #000;
 $white: #fff;
 $review-box-border: 3px solid #f0f0f0;
 $review-box-border-radius: 10px;
+$footer-color: #273236;
 
 //dimension
 $header-height: 60px;
 $content-width: 1200px;
+$nav-button-size: 50px;
+$nav-button-margin: 40px;
+$content-width-with-nav-button: calc(
+  #{$content-width} + 2 *#{$nav-button-size} + 2 *#{$nav-button-margin}
+);
+
+//gutter
+$typical-padding: 40px;

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import smoothscroll from "smoothscroll-polyfill";
 import {
@@ -14,8 +14,7 @@ import {
 export class ReviewComponent implements OnInit {
   chevronLeft = faChevronLeft;
   chevronRight = faChevronRight;
-  slider = document.getElementById("slider");
-  readonly reviewBoxWidth: number = 350;
+  readonly scrollStep: number = 350 + 75;
 
   constructor(private translate: TranslateService) {
     smoothscroll.polyfill();
@@ -25,18 +24,18 @@ export class ReviewComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  scrollLeft(): void {
-    this.slider.scrollBy({
+  scrollRight(el: HTMLElement): void {
+    el.scrollBy({
       top: 0,
-      left: this.reviewBoxWidth,
+      left: this.scrollStep,
       behavior: "smooth",
     });
   }
 
-  scrollRight(): void {
-    this.slider.scrollBy({
+  scrollLeft(el: HTMLElement): void {
+    el.scrollBy({
       top: 0,
-      left: -this.reviewBoxWidth,
+      left: -this.scrollStep,
       behavior: "smooth",
     });
   }

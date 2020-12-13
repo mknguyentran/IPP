@@ -21,6 +21,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
       },
       extend: true,
     }),
+    FontAwesomeModule,
   ],
 })
 export class ReviewModule {}

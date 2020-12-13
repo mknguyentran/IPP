@@ -6,6 +6,7 @@ import { ReviewComponent } from "./review.component";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { HttpClient } from "@angular/common/http";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [ReviewComponent],

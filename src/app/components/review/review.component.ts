@@ -1,5 +1,10 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
+import smoothscroll from "smoothscroll-polyfill";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "app-review",
@@ -7,18 +12,32 @@ import { TranslateService } from "@ngx-translate/core";
   styleUrls: ["./review.component.scss"],
 })
 export class ReviewComponent implements OnInit {
-  @ViewChild("slider") slider: ElementRef;
+  chevronLeft = faChevronLeft;
+  chevronRight = faChevronRight;
+  slider = document.getElementById("slider");
+  readonly reviewBoxWidth: number = 350;
+
   constructor(private translate: TranslateService) {
+    smoothscroll.polyfill();
     translate.currentLang = "";
     translate.use("vi_VN");
   }
 
   ngOnInit(): void {}
 
-  scrollRight(): void {
-    console.log("a");
+  scrollLeft(): void {
+    this.slider.scrollBy({
+      top: 0,
+      left: this.reviewBoxWidth,
+      behavior: "smooth",
+    });
+  }
 
-    this.slider.nativeElement.scrollRight = 100;
-    console.log(this.slider.nativeElement.scrollRight);
+  scrollRight(): void {
+    this.slider.scrollBy({
+      top: 0,
+      left: -this.reviewBoxWidth,
+      behavior: "smooth",
+    });
   }
 }

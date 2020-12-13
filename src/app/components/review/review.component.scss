@@ -14,7 +14,7 @@
       display: flex;
       overflow-y: auto;
       flex-wrap: nowrap;
-      scroll-snap-type: mandatory;
+      scroll-snap-type: x mandatory;
       &::-webkit-scrollbar {
         display: none;
       }

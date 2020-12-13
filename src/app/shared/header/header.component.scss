@@ -9,8 +9,8 @@
     &:focus {
       outline: 0;
     }
-    img {
-      height: 100%;
-    }
+  }
+  .header-link {
+    font-size: $font-size-header-footer;
   }
 }

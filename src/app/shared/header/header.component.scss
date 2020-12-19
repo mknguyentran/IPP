@@ -1,16 +1,18 @@
 @import "variables";
-
-.header-container {
-  height: $header-height;
-  width: $content-width;
-  margin: auto;
-  .logo {
-    height: 100%;
-    &:focus {
-      outline: 0;
+:host {
+  z-index: 1;
+  .header-container {
+    height: $header-height;
+    width: $content-width;
+    margin: auto;
+    .logo {
+      height: 100%;
+      &:focus {
+        outline: 0;
+      }
     }
-  }
-  .header-link {
-    font-size: $font-size-header-footer;
+    .header-link {
+      font-size: $font-size-header-footer;
+    }
   }
 }

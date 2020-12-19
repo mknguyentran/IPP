@@ -17,6 +17,17 @@
       "dom"
     ],
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "@models": [
+        "src/app/model/model.ts"
+      ],
+      "@apis": [
+        "src/app/api/api.service.ts"
+      ],
+      "@environment":[
+        "src/environments/environment.ts"
+      ]
+    }
   }
 }

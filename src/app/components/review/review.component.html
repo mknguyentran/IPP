@@ -1,4 +1,5 @@
 <div class="container">
+
     <div class="content p-grid p-justify-center p-nogutter">
         <h1 class="header content-width">{{"reviewHeader" | translate}}</h1>
         <div class="p-grid p-align-center p-justify-between content-width-with-nav-button">
@@ -6,11 +7,9 @@
                 <fa-icon class="left-chevron" [icon]="chevronLeft"></fa-icon>
             </button>
             <div class="slider p-col-12 p-grid" #reviewSlider>
-                <div class="review-box"></div>
-                <div class="review-box"></div>
-                <div class="review-box"></div>
-                <div class="review-box"></div>
-                <div class="review-box"></div>
+                <ng-template ngFor let-item [ngForOf]="reviewList">
+                    <fb-post class="review-box" attr.href="{{item.Url}}" width="350"></fb-post>
+                </ng-template>
             </div>
             <button class="round-nav-button white-round-nav-button" (click)="scrollRight(reviewSlider)">
                 <fa-icon [icon]="chevronRight"></fa-icon>
@@ -24,11 +23,11 @@
                 <fa-icon class="left-chevron" [icon]="chevronLeft"></fa-icon>
             </button>
             <div class="slider p-col-12 p-grid" #achievementSlider>
-                <div class="review-box"></div>
-                <div class="review-box"></div>
-                <div class="review-box"></div>
-                <div class="review-box"></div>
-                <div class="review-box"></div>
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
             </div>
             <button class="round-nav-button white-round-nav-button" (click)="scrollRight(achievementSlider)">
                 <fa-icon [icon]="chevronRight"></fa-icon>

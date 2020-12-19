@@ -20,6 +20,11 @@
       .review-box {
         scroll-snap-align: end;
         flex-shrink: 0;
+        margin-right: 75px;
+      }
+      .mock-box {
+        scroll-snap-align: end;
+        flex-shrink: 0;
         width: 350px;
         height: 327px;
         margin-right: 75px;

@@ -20,6 +20,7 @@ img {
 }
 
 .background-blur {
+  background-color: rgba($color: $white, $alpha: 0.7);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }

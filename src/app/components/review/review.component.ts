@@ -68,7 +68,9 @@ export class ReviewComponent implements OnInit {
       .getReview()
       .pipe(takeUntil(this.destroy$))
       .subscribe((review) => {
-        this.reviewList = review;
+        this.reviewList = review.sort((a, b) => {
+          return a.InputtedAt - b.InputtedAt;
+        });
         this.initFacebook();
       });
   }

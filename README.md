@@ -1,6 +1,7 @@
-# IPP Website (FE)
+# IPP Main WebApp
 
-Website for IPP IELTS English Center
+WebApp for IPP IELTS English Center
+
 ## Members
-Minh Nguyen, Nha, Phuong Anh, Mk
 
+Minh Nguyen, Nha, Phuong Anh, Mk

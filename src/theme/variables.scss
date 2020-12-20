@@ -1,0 +1,33 @@
+//font
+$font: Helvetica Neue;
+$font-stack: $font, Helvetica, sans-serif;
+
+//font-weight
+$font-weight-semibold: 500;
+
+//font-size
+$font-size-header: 32px;
+$font-size-header-footer: 18px;
+
+//color
+$primary-color: #2d648f;
+$secondary-color: #5bb0e0;
+$bolder-primary-color: #136493;
+$black: #000;
+$white: #fff;
+$review-box-border: 1px solid #dddfe2;
+$review-box-border-radius: 3px;
+$footer-background-color: #273236;
+$footer-header-text-color: #39b3e6;
+
+//dimension
+$header-height: 60px;
+$content-width: 1200px;
+$nav-button-size: 50px;
+$nav-button-margin: 40px;
+$content-width-with-nav-button: calc(
+  #{$content-width} + 2 *#{$nav-button-size} + 2 *#{$nav-button-margin}
+);
+
+//gutter
+$typical-padding: 40px;

@@ -1,0 +1,31 @@
+{
+  "aboutIPP": "Về IPP",
+  "ieltsCourses": "Khóa học IELTS",
+  "review": "Review học viên",
+  "library": "Thư viện IPP",
+  "appoinment": "Hẹn test đầu vào",
+  "IPPSystem": "IPP System",
+  "curriculum": "Chương trình học",
+  "contact": "Liên hệ",
+  "vacancy": "Tuyển dụng",
+  "footer": {
+    "hotline": {
+      "header": "Hotline",
+      "line1": "08 9664 1068",
+      "line2": "078 583 0799"
+    },
+    "curriculum": {
+      "line1": "Beginner",
+      "line2": "Pre-intermediate",
+      "line3": "AIM 5+",
+      "line4": "AIM 6+",
+      "line5": "AIM 7+",
+      "line6": "IELTS Online"
+    },
+    "address": {
+      "header": "Cơ sở IPP HCM",
+      "line1": "195/53 Xô Viết Nghệ Tĩnh, P. 17, Q. Bình Thạnh.",
+      "line2": "232/31 Cộng Hòa, P.12, Q. Tân Bình. "
+    }
+  }
+}

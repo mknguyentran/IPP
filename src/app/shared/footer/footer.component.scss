@@ -1,0 +1,35 @@
+@import "variables";
+
+.footer-container {
+  background-color: $footer-background-color;
+  padding: $typical-padding 0;
+  .footer-block {
+    > * {
+      font-size: $font-size-header-footer;
+      padding-bottom: 0.7em;
+    }
+    .header-text {
+      font-weight: normal;
+      color: $footer-header-text-color;
+    }
+    p {
+      color: $white;
+    }
+    .social-icon {
+      height: 40px;
+      width: 40px;
+    }
+    .hotline-block {
+      margin-top: auto;
+      > * {
+        font-size: $font-size-header-footer;
+      }
+      .header-text {
+        padding-bottom: 0.7em;
+      }
+    }
+    &.primary-block {
+      align-content: space-between;
+    }
+  }
+}

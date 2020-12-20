@@ -1,0 +1,36 @@
+@import "variables";
+
+.container {
+  .content {
+    padding: $typical-padding 0;
+    .header {
+      color: $bolder-primary-color;
+    }
+    .slider {
+      width: $content-width;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      overflow-y: auto;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .review-box {
+        scroll-snap-align: end;
+        flex-shrink: 0;
+        margin-right: 75px;
+      }
+      .mock-box {
+        scroll-snap-align: end;
+        flex-shrink: 0;
+        width: 350px;
+        height: 327px;
+        margin-right: 75px;
+        border: $review-box-border;
+        border-radius: $review-box-border-radius;
+      }
+    }
+  }
+}

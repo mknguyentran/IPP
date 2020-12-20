@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "ng serve --open --port 4200",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -24,6 +24,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
+    "aws-amplify": "^3.3.13",
+    "aws-amplify-angular": "^5.0.42",
     "ngx-facebook": "^3.0.0-0",
     "primeicons": "^4.0.0",
     "primeng": "^10.0.3",

@@ -27,6 +27,7 @@ import { FacebookModule } from 'ngx-facebook';
   ],
 })
 export class ReviewModule {}
+
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/review/', '.json');
 }

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import smoothscroll from 'smoothscroll-polyfill';
 import {
@@ -8,17 +8,15 @@ import {
 import { ReviewService } from '@apis';
 import { ReviewResponse } from '@models';
 import { takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
 import { FacebookService, InitParams } from 'ngx-facebook';
+import { BaseComponent } from '../base.component';
 
 @Component({
   selector: 'app-review',
   templateUrl: './review.component.html',
   styleUrls: ['./review.component.scss'],
 })
-export class ReviewComponent implements OnInit {
-  private readonly destroy$ = new Subject();
-
+export class ReviewComponent extends BaseComponent implements OnInit {
   chevronLeft = faChevronLeft;
   chevronRight = faChevronRight;
   reviewList: ReviewResponse[] = new Array();
@@ -29,6 +27,7 @@ export class ReviewComponent implements OnInit {
     private reviewService: ReviewService,
     private fb: FacebookService
   ) {
+    super();
     smoothscroll.polyfill();
     translate.currentLang = '';
     translate.use('vi_VN');

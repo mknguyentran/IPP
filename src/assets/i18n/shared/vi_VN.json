@@ -8,6 +8,13 @@
   "curriculum": "Chương trình học",
   "contact": "Liên hệ",
   "vacancy": "Tuyển dụng",
+  "close": "Đóng",
+  "listening": "Listening",
+  "speaking": "Speaking",
+  "reading": "Reading",
+  "writing": "Writing",
+  "overall": "Overall",
+  "showReview":"Xem Review",
   "footer": {
     "hotline": {
       "header": "Hotline",

@@ -12,6 +12,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { AppointmentComponent } from './shared/footer/components/appointment/appointment.component';
 import { ContactComponent } from './shared/footer/components/contact/contact.component';
 import { HomeModule } from './components/home/home.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HomeModule } from './components/home/home.module';
       },
     }),
     HomeModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

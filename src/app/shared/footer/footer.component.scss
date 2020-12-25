@@ -27,6 +27,13 @@
       .header-text {
         padding-bottom: 0.7em;
       }
+      .phone-number{
+        color: $white;
+        transition: opacity $button-transition-duration;
+        &:hover{
+          opacity: 0.7;
+        }
+      }
     }
     &.primary-block {
       align-content: space-between;

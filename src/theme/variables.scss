@@ -4,10 +4,14 @@ $font-stack: $font, Helvetica, sans-serif;
 
 //font-weight
 $font-weight-semibold: 500;
+$font-weight-light: 300;
 
 //font-size
-$font-size-header: 32px;
-$font-size-header-footer: 18px;
+$font-size-header: 28px;
+$font-size-sub-header: 18px;
+$font-size-header-footer: 14px;
+$font-size-label-button: 18px;
+$font-size-content: 18px;
 
 //color
 $primary-color: #2d648f;
@@ -16,12 +20,14 @@ $bolder-primary-color: #136493;
 $black: #000;
 $white: #fff;
 $review-box-border: 1px solid #dddfe2;
-$review-box-border-radius: 3px;
 $footer-background-color: #273236;
 $footer-header-text-color: #39b3e6;
+$white-background-blur-color: rgba($color: $white, $alpha: 0.7);
 
 //dimension
 $header-height: 60px;
+$review-box-border-radius: 5px;
+$dialog-border-radius: 10px;
 $content-width: 1200px;
 $nav-button-size: 50px;
 $nav-button-margin: 40px;
@@ -31,3 +37,8 @@ $content-width-with-nav-button: calc(
 
 //gutter
 $typical-padding: 40px;
+
+//duration
+$button-transition-duration: 0.2s;
+$header-transition-duration: 0.4s;
+

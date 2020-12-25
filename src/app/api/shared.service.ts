@@ -2,18 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
 import { Observable, of } from 'rxjs';
 import { AchievementResponse, ReviewResponse } from '@models';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ReviewService {
+export class SharedService {
   constructor(private httpService: HttpService) {}
 
-  getReview(): Observable<ReviewResponse[]> {
-    return this.httpService.get('/review');
-  }
-
-  getAchievemnt(): Observable<AchievementResponse[]> {
-    return this.httpService.get('/achievement');
+  getFile(fileUrl: string): Observable<Blob> {
+    return this.httpService.getFile(fileUrl);
   }
 }

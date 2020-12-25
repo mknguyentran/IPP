@@ -1,0 +1,56 @@
+<div class="dialog-container" (scroll)="onScroll($event)">
+    <div class="dialog-header p-grid p-nogutter p-align-center p-justify-between"
+        [class.background-blur]="contentIsUnderHeader">
+        <button class="label-button left-button" (click)="closeDialog()">{{'close' | translate}}</button>
+        <h2 class="header sub-header" [class.visible]="contentIsUnderHeader"> {{achievement.StudentName}} </h2>
+        <button class="label-button right-button"
+            [class.visible]="achievement.ReviewUrl && achievement.ReviewUrl.length > 0"
+            (click)="showReview()">{{'showReview' | translate}}</button>
+
+    </div>
+    <div class="p-grid p-nogutter dialog-content p-justify-between">
+        <div class="p-col-4 p-dir-col">
+            <ng-template ngFor let-image [ngForOf]="achievement.DetailImage">
+                <div *ngIf="image" class="p-col-12 p-col-nogutter">
+                    <img src="{{image}}" />
+                </div>
+            </ng-template>
+        </div>
+        <div class="p-col-8 student-achievement">
+            <h1 class="header"> {{achievement.StudentName}} </h1>
+            <div class="p-col-12 content-block p-grid p-nogutter p-col-nogutter p-justify-between">
+                <div class="achievement-box grade-box p-grid p-nogutter p-dir-col p-justify-between p-align-center">
+                    <p> {{'listening'|translate}} </p>
+                    <div class="icon p-col-12 p-grid p-nogutter p-justify-center">
+                        <img src="/assets/image/listening.png">
+                    </div>
+                    <p> {{achievement.Grade.Listening}} </p>
+                </div>
+                <div class="achievement-box grade-box p-grid p-nogutter p-dir-col p-justify-between p-align-center">
+                    <p> {{'reading'|translate}} </p>
+                    <div class="icon p-col-12 p-grid p-nogutter p-justify-center">
+                        <img src="/assets/image/reading.png">
+                    </div>
+                    <p> {{achievement.Grade.Reading}} </p>
+                </div>
+                <div class="achievement-box grade-box p-grid p-nogutter p-dir-col p-justify-between p-align-center">
+                    <p> {{'writing'|translate}} </p>
+                    <div class="icon p-col-12 p-grid p-nogutter p-justify-center">
+                        <img src="/assets/image/writing.png">
+                    </div>
+                    <p> {{achievement.Grade.Writing}} </p>
+                </div>
+                <div class="achievement-box grade-box p-grid p-nogutter p-dir-col p-justify-between p-align-center">
+                    <p> {{'speaking'|translate}} </p>
+                    <div class="icon p-col-12 p-grid p-nogutter p-justify-center">
+                        <img src="/assets/image/speaking.png">
+                    </div>
+                    <p> {{achievement.Grade.Speaking}} </p>
+                </div>
+            </div>
+            <div class="content-block achievement-box big-grade-box p-grid p-nogutter p-justify-center p-align-center p-col-12">
+                <p> {{'overall'|translate}}: {{achievement.Grade.Overall}} </p>
+            </div>
+        </div>
+    </div>
+</div>

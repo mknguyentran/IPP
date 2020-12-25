@@ -1,13 +1,13 @@
 <div class="container">
     <div class="content p-grid p-justify-center p-nogutter">
         <h1 class="header content-width">{{"reviewHeader" | translate}}</h1>
-        <div class="p-grid p-align-center p-justify-between content-width-with-nav-button">
+        <div class="p-grid p-nogutter p-align-center p-justify-between content-width-with-nav-button">
             <button class="round-nav-button white-round-nav-button" (click)="scrollLeft(reviewSlider)">
                 <fa-icon class="left-chevron" [icon]="chevronLeft"></fa-icon>
             </button>
             <div class="slider p-col-12 p-grid" #reviewSlider>
                 <ng-template ngFor let-item [ngForOf]="reviewList">
-                    <fb-post class="review-box" attr.href="{{item.Url}}" width="350"></fb-post>
+                    <fb-post class="content-box" attr.href="{{item.Url}}" width="350"></fb-post>
                 </ng-template>
             </div>
             <button class="round-nav-button white-round-nav-button" (click)="scrollRight(reviewSlider)">
@@ -17,16 +17,19 @@
     </div>
     <div class="content p-grid p-justify-center p-nogutter">
         <h1 class="header content-width">{{"achievementHeader" | translate}}</h1>
-        <div class="p-grid p-align-center p-justify-between content-width-with-nav-button">
+        <div class="p-grid p-nogutter p-align-center p-justify-between content-width-with-nav-button">
             <button class="round-nav-button white-round-nav-button" (click)="scrollLeft(achievementSlider)">
                 <fa-icon class="left-chevron" [icon]="chevronLeft"></fa-icon>
             </button>
             <div class="slider p-col-12 p-grid" #achievementSlider>
-                <div class="mock-box"></div>
-                <div class="mock-box"></div>
-                <div class="mock-box"></div>
-                <div class="mock-box"></div>
-                <div class="mock-box"></div>
+                <div class="content-box achievement-box p-grid p-nogutter p-justify-center p-align-center"
+                    *ngFor="let achievement of achievementList" [class.no-thumbnail]="!achievement.ThumbnailImageUrl"
+                    (click)="openAchievementDetail(achievement)">
+                    <img *ngIf="achievement.ThumbnailImageUrl; else elseblock" src="{{achievement.ThumbnailImageUrl}}">
+                    <ng-template #elseblock>
+                        {{achievement.StudentName}}
+                    </ng-template>
+                </div>
             </div>
             <button class="round-nav-button white-round-nav-button" (click)="scrollRight(achievementSlider)">
                 <fa-icon [icon]="chevronRight"></fa-icon>

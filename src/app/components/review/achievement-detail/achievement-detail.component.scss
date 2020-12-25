@@ -1,0 +1,55 @@
+@import "variables";
+$grade-box-dimension: 150px;
+
+.dialog-container {
+  .dialog-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top-left-radius: $dialog-border-radius;
+    border-top-right-radius: $dialog-border-radius;
+    .right-button:not(.visible) {
+      visibility: hidden;
+    }
+  }
+  .header {
+    color: $bolder-primary-color;
+    transition: opacity $header-transition-duration;
+    &.sub-header:not(.visible) {
+      opacity: 0;
+    }
+  }
+  .dialog-content {
+    .student-achievement {
+      padding-left: 2%;
+      .achievement-box {
+        * {
+          color: $primary-color;
+          font-size: $font-size-content;
+        }
+        padding: 15px 0;
+        border-radius: $dialog-border-radius;
+        box-shadow: -5px -5px 20px rgba($color: $white, $alpha: 0.7),
+          5px 5px 20px rgba($color: #ddd, $alpha: 0.7);
+        background-color: $white;
+        &.grade-box {
+          height: $grade-box-dimension;
+          width: $grade-box-dimension;
+          .icon {
+            height: 40%;
+          }
+        }
+        &.big-grade-box{
+            height: 100px;
+            p{
+                font-weight: $font-weight-semibold;
+            }
+        }
+      }
+      .content-block{
+          margin-bottom: 25px;
+      }
+    }
+  }
+}

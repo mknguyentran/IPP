@@ -13,4 +13,11 @@ export class HttpService {
   get(path: string): Observable<any> {
     return this.httpClient.get(this.baseUrl + path);
   }
+
+  getFile(fileUrl: string): Observable<any> {
+    return this.httpClient.get(fileUrl, {
+      headers: { 'Access-Control-Allow-Origin': '*' },
+      responseType: 'blob',
+    });
+  }
 }

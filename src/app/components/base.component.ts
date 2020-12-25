@@ -16,4 +16,18 @@ export abstract class BaseComponent implements OnInit, OnDestroy {
     this.destroy$.next(true);
     this.destroy$.complete();
   }
+
+  protected async checkImage(
+    url: string,
+    callback: (isExist: boolean) => void
+  ): Promise<void> {
+    const img = new Image();
+    img.onload = () => {
+       callback(true);
+    };
+    img.onerror = () => {
+      callback(false);
+    };
+    img.src = url;
+  }
 }

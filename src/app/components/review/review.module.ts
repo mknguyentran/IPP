@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 
 import { ReviewRoutingModule } from './review-routing.module';
 import { ReviewComponent } from './review.component';
@@ -8,9 +9,10 @@ import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FacebookModule } from 'ngx-facebook';
+import { AchievementDetailComponent } from './achievement-detail/achievement-detail.component';
 
 @NgModule({
-  declarations: [ReviewComponent],
+  declarations: [ReviewComponent, AchievementDetailComponent],
   imports: [
     CommonModule,
     ReviewRoutingModule,
@@ -24,7 +26,9 @@ import { FacebookModule } from 'ngx-facebook';
     }),
     FacebookModule.forRoot(),
     FontAwesomeModule,
+    DynamicDialogModule,
   ],
+  entryComponents: [AchievementDetailComponent],
 })
 export class ReviewModule {}
 

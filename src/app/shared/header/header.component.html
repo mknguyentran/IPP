@@ -1,6 +1,6 @@
 <div class="header-container p-grid p-justify-between p-align-center p-col-nogutter">
     <div class="logo cursor-pointer p-col-2">
-        <img src="/assets/image/IPPLogo.png" />
+        <a routerLink=""><img src="/assets/image/IPPLogo.png" /></a>
     </div>
     <div *ngFor="let tab of headerTabs">
         <a class="headerLink" routerLinkActive="active" [routerLink]=tab.routerLink>{{tab.name | translate}}</a>

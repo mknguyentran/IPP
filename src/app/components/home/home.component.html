@@ -1,1 +1,49 @@
-<p>home works!</p>
+<div class="container p-grid p-nogutter p-justify-center">
+    <div class="view-height landing-screen p-grid p-nogutter content-width">
+        <div class="p-col-5 tag-line p-grid p-nogutter p-dir-col p-align-center p-justify-center">
+            <div class="p-grid p-nogutter p-dir-col p-justify-between">
+                <p>Chuẩn đầu ra</p>
+                <p>Chuẩn điểm số</p>
+                <p>Chuẩn tư duy</p>
+                <p class="blue-gradient">IPP IELTS</p>
+            </div>
+        </div>
+        <div class="p-col-7 chat-message p-grid p-nogutter p-dir-col p-align-center p-justify-center">
+            <div class="p-col-12 p-grid p-nogutter p-dir-col">
+                <div
+                    class="message-bubble message-bubble-right filled decoration p-grid p-nogutter p-justify-center p-align-center">
+                </div>
+                <div class="message-bubble message-bubble-left p-grid p-nogutter p-justify-center p-align-center initial-question">
+                    Mục tiêu IELTS của bạn là gì?
+                </div>
+            </div>
+            <div class="p-col-12 reply-options p-grid p-nogutter p-dir-col">
+                <div class="message-bubble message-bubble-right p-grid p-nogutter p-justify-center p-align-center"
+                    (click)="chooseReply(1)" [class.choosen-reply]="currentReply && currentReply === 1"
+                    [class.discarded-reply]="currentReply && currentReply !== 1">
+                    Mình đang mất gốc và muốn học cải thiện</div>
+                <div class="message-bubble message-bubble-right p-grid p-nogutter p-justify-center p-align-center"
+                    (click)="chooseReply(2)" [class.choosen-reply]="currentReply && currentReply === 2"
+                    [class.discarded-reply]="currentReply && currentReply !== 2">
+                    Mình cần IELTS 6.0+</div>
+                <div class="message-bubble message-bubble-right p-grid p-nogutter p-justify-center p-align-center"
+                    (click)="chooseReply(3)" [class.choosen-reply]="currentReply && currentReply === 3"
+                    [class.discarded-reply]="currentReply && currentReply !== 3">
+                    Mình cần IELTS 7.0+</div>
+                <div class="message-bubble message-bubble-right p-grid p-nogutter p-justify-center p-align-center"
+                    (click)="chooseReply(4)" [class.choosen-reply]="currentReply && currentReply === 4"
+                    [class.discarded-reply]="currentReply && currentReply !== 4">
+                    Mình cần thi IELTS gấp trong vòng 3 tháng tới</div>
+                <div class="message-bubble message-bubble-right p-grid p-nogutter p-justify-center p-align-center"
+                    (click)="chooseReply(5)" [class.choosen-reply]="currentReply && currentReply === 5"
+                    [class.discarded-reply]="currentReply && currentReply !== 5">
+                    Mình quan tâm đến khóa học IELTS Online</div>
+                <div class="message-bubble message-bubble-left reply p-grid p-nogutter p-justify-center p-align-center" [class.display]="displayReply" [class.displayed]="displayedReply">
+                    <p>
+                        Ấn vào đây để xem khoá học nhé ;D
+                    </p><i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

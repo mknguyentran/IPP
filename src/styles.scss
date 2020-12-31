@@ -4,7 +4,6 @@
 * {
   text-decoration: none;
   font-family: $font-stack;
-  color: $black;
   margin: 0;
   box-sizing: border-box;
 }
@@ -33,6 +32,7 @@ img {
 }
 
 a {
+  color: $black;
   &.active {
     color: $primary-color;
   }

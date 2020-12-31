@@ -1,0 +1,100 @@
+@import "variables";
+$message-bubble-fade-transition-duration: 0.3s;
+$message-bubble-move-transition-duration: 1s;
+
+:host {
+  .view-height {
+    height: 100vh;
+  }
+  .landing-screen {
+    .tag-line {
+      p {
+        font-size: 50px;
+        font-weight: 700;
+        padding: 10px 0;
+        color: $dark-gray;
+        &.blue-gradient {
+          background: -webkit-linear-gradient($secondary-color, $primary-color);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    .chat-message {
+      padding: 0 5%;
+      .message-bubble {
+        min-width: 50%;
+        padding: 1em 2em;
+        height: 60px;
+        margin-bottom: 20px;
+        border-radius: 40px;
+        &.message-bubble-right {
+          cursor: pointer;
+          align-self: flex-end;
+          border: 2px solid $blue-gray;
+          border-bottom-right-radius: 2px;
+          color: $blue-gray;
+          transition: all $message-bubble-move-transition-duration ease
+              $message-bubble-fade-transition-duration,
+            opacity $message-bubble-fade-transition-duration,
+            background-color $button-transition-duration,
+            color $button-transition-duration;
+          &.filled,
+          &:hover,
+          &.choosen-reply {
+            background-color: $blue-gray;
+            color: $white;
+          }
+          &.decoration {
+            position: relative;
+            top: 30px;
+            width: 70%;
+          }
+        }
+        &.message-bubble-left {
+          align-self: flex-start;
+          background-color: $primary-color;
+          border-bottom-left-radius: 2px;
+          color: $white;
+          &.reply {
+            &:not(.display) {
+              display: none;
+            }
+            opacity: 0;
+            p {
+              text-decoration: underline;
+            }
+            &.display {
+              transition: opacity $button-transition-duration;
+              cursor: pointer;
+              &.displayed{
+                opacity: 1;
+              }
+            }
+          }
+          &.initial-question {
+            z-index: 1;
+          }
+        }
+        .fa-chevron-right {
+          padding-left: 15px;
+          text-decoration: none;
+        }
+      }
+      .reply-options {
+        height: 400px;
+        .discarded-reply {
+          opacity: 0;
+          height: 0;
+          padding: 0;
+          margin: 0;
+          border: none;
+        }
+        .choosen-reply {
+          top: 0;
+        }
+      }
+    }
+  }
+}

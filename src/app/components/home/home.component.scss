@@ -5,6 +5,7 @@ $message-bubble-move-transition-duration: 1s;
 :host {
   .view-height {
     height: 100vh;
+    min-height: fit-content;
   }
   .landing-screen {
     .tag-line {
@@ -30,7 +31,6 @@ $message-bubble-move-transition-duration: 1s;
         margin-bottom: 20px;
         border-radius: 40px;
         &.message-bubble-right {
-          cursor: pointer;
           align-self: flex-end;
           border: 2px solid $blue-gray;
           border-bottom-right-radius: 2px;
@@ -48,7 +48,7 @@ $message-bubble-move-transition-duration: 1s;
           }
           &.decoration {
             position: relative;
-            top: 30px;
+            top: 40px;
             width: 70%;
           }
         }
@@ -58,18 +58,18 @@ $message-bubble-move-transition-duration: 1s;
           border-bottom-left-radius: 2px;
           color: $white;
           &.reply {
+            transition: opacity $button-transition-duration 1.5s,
+              filter $button-transition-duration;
             &:not(.display) {
-              display: none;
+              opacity: 0;
             }
-            opacity: 0;
             p {
               text-decoration: underline;
             }
             &.display {
-              transition: opacity $button-transition-duration;
-              cursor: pointer;
-              &.displayed{
-                opacity: 1;
+              opacity: 1;
+              &:hover {
+                filter: opacity(0.7);
               }
             }
           }
@@ -83,7 +83,7 @@ $message-bubble-move-transition-duration: 1s;
         }
       }
       .reply-options {
-        height: 400px;
+        height: 522px;
         .discarded-reply {
           opacity: 0;
           height: 0;
@@ -93,6 +93,13 @@ $message-bubble-move-transition-duration: 1s;
         }
         .choosen-reply {
           top: 0;
+        }
+        .undo-button {
+          &:not(.display) {
+            filter: opacity(0);
+          }
+          padding-top: 20px;
+          transition: filter $button-transition-duration 3s;
         }
       }
     }

@@ -16,12 +16,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {}
 
   chooseReply(replyNumber: number): void {
-    this.currentReply = replyNumber;
-    setTimeout(() => {
-      this.displayReply = true;
-      setTimeout(() => {
-        this.displayedReply = true;
-      }, this.displayedReplyTimeout);
-    }, this.displayingReplyTimeout);
+    if (!this.currentReply) {
+      this.currentReply = replyNumber;
+    }
+  }
+
+  discardChoice(): void{
+    delete this.currentReply;
   }
 }

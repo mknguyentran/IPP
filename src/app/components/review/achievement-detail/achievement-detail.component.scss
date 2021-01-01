@@ -12,6 +12,9 @@ $grade-box-dimension: 150px;
     .right-button:not(.visible) {
       visibility: hidden;
     }
+    .label-button{
+      width: 10%;
+    }
   }
   .header {
     color: $bolder-primary-color;

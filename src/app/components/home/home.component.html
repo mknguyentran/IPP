@@ -13,7 +13,8 @@
                 <div
                     class="message-bubble message-bubble-right filled decoration p-grid p-nogutter p-justify-center p-align-center">
                 </div>
-                <div class="message-bubble message-bubble-left p-grid p-nogutter p-justify-center p-align-center initial-question">
+                <div
+                    class="message-bubble message-bubble-left p-grid p-nogutter p-justify-center p-align-center initial-question">
                     Mục tiêu IELTS của bạn là gì?
                 </div>
             </div>
@@ -38,11 +39,13 @@
                     (click)="chooseReply(5)" [class.choosen-reply]="currentReply && currentReply === 5"
                     [class.discarded-reply]="currentReply && currentReply !== 5">
                     Mình quan tâm đến khóa học IELTS Online</div>
-                <div class="message-bubble message-bubble-left reply p-grid p-nogutter p-justify-center p-align-center" [class.display]="displayReply" [class.displayed]="displayedReply">
+                <div class="message-bubble message-bubble-left reply p-grid p-nogutter p-justify-center p-align-center"
+                    [class.display]="currentReply">
                     <p>
                         Ấn vào đây để xem khoá học nhé ;D
                     </p><i class="fas fa-chevron-right"></i>
                 </div>
+                <!-- <button class="label-button undo-button" [class.display]="currentReply" (click)="discardChoice()">Chọn lại <i class="fas fa-undo"></i></button> -->
             </div>
         </div>
     </div>

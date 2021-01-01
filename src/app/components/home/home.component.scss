@@ -83,8 +83,9 @@ $message-bubble-move-transition-duration: 1s;
         }
       }
       .reply-options {
-        height: 502px;
+        height: 522px;
         .discarded-reply {
+          transform: scale(0);
           opacity: 0;
           height: 0;
           padding: 0;

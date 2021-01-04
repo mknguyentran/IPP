@@ -53,6 +53,11 @@ h2.header {
   font-weight: $font-weight-semibold;
 }
 
+p.paragraph {
+  font-size: $font-size-content;
+  padding-bottom: $typical-padding;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -101,10 +106,10 @@ button.label-button {
   &:hover {
     opacity: 0.6;
   }
-  &.left-button{
+  &.left-button {
     text-align: left;
   }
-  &.right-button{
+  &.right-button {
     text-align: right;
   }
 }
@@ -121,4 +126,23 @@ button.label-button {
     padding: calc(#{$header-height} + 10px) 2rem 0 2rem;
     height: 100%;
   }
+}
+
+@mixin view-height($view-height) {
+  height: $view-height;
+  min-height: fit-content;
+}
+
+.view-height {
+  @include view-height(100vh);
+}
+
+.half-view-height {
+  @include view-height(50vh);
+}
+
+.white-floating-box {
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: -10px -10px 30px $white, 10px 10px 30px #ddd;
 }

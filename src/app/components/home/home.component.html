@@ -45,7 +45,35 @@
                         Ấn vào đây để xem khoá học nhé ;D
                     </p><i class="fas fa-chevron-right"></i>
                 </div>
-                <button class="label-button undo-button" [class.display]="currentReply" (click)="discardChoice()">Chọn lại <i class="fas fa-undo"></i></button>
+                <button class="label-button undo-button" [class.display]="currentReply" (click)="discardChoice()">
+                    Chọn lại <i class="fas fa-undo"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="p-col-12 half-view-height brief-intro p-grid p-nogutter p-dir-col p-justify-between p-align-center">
+        <div class="content content-width p-grid p-dir-col">
+            <h1 class="p-col-12 p-col-nogutter header"> {{"briefIntro.header" | translate}} </h1>
+            <div class="p-col-6 p-col-nogutter">
+                <p class="paragraph"> {{"briefIntro.paragraph2" | translate}} </p>
+            </div>
+        </div>
+        <div class="content content-width p-grid p-nogutter p-justify-center">
+            <div class="p-col-10 p-grid p-nogutter p-justify-between">
+                <div class="p-col-3 impact-info white-floating-box p-grid p-nogutter p-dir-col p-justify-end">
+                    <p class="large">3</p>
+                    <p>cơ sở</p>
+                </div>
+                <div class="p-col-3 impact-info white-floating-box p-grid p-nogutter p-dir-col">
+                    <p>trên</p>
+                    <p class="large">1000</p>
+                    <p>học viên</p>
+                </div>
+                <div class="p-col-3 impact-info white-floating-box p-grid p-nogutter p-dir-col">
+                    <p>trên</p>
+                    <p class="large">30</p>
+                    <p>giáo viên</p>
+                </div>
             </div>
         </div>
     </div>

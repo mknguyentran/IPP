@@ -3,10 +3,6 @@ $message-bubble-fade-transition-duration: 0.3s;
 $message-bubble-move-transition-duration: 1s;
 
 :host {
-  .view-height {
-    height: 100vh;
-    min-height: fit-content;
-  }
   .landing-screen {
     .tag-line {
       p {
@@ -101,6 +97,43 @@ $message-bubble-move-transition-duration: 1s;
           }
           padding-top: 20px;
           transition: filter $button-transition-duration 3s;
+        }
+      }
+    }
+  }
+  .header {
+    color: $primary-color;
+  }
+  .brief-intro {
+    
+    .content {
+      .impact-info {
+        padding: 20px 0;
+        p {
+          text-align: center;
+          &.large {
+            font-size: $font-size-very-large;
+            font-weight: 900;
+          }
+          &:not(.large){
+            font-size: 30px;
+          }
+        }
+        &:nth-child(1) {
+
+          p {
+            color: $orange;
+          }
+        }
+        &:nth-child(2) {
+          p {
+            color: $red;
+          }
+        }
+        &:nth-child(3) {
+          p {
+            color: $purple;
+          }
         }
       }
     }

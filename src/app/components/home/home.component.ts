@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,10 @@ export class HomeComponent implements OnInit {
   displayedReply: boolean = false;
   displayingReplyTimeout: number = 1200;
   displayedReplyTimeout: number = 500;
-  constructor() {}
+  constructor(private translate: TranslateService) {
+    translate.currentLang = '';
+    translate.use('vi_VN');
+  }
 
   ngOnInit(): void {}
 
@@ -21,7 +25,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  discardChoice(): void{
+  discardChoice(): void {
     delete this.currentReply;
   }
 }

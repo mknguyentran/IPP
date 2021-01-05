@@ -22,10 +22,10 @@
         scroll-snap-align: end;
         flex-shrink: 0;
         margin-right: 75px;
+        width: 350px;
         &.achievement-box {
           position: relative;
           transition: all $button-transition-duration;
-          width: 350px;
           height: 327px;
           border: $review-box-border;
           border-radius: $review-box-border-radius;

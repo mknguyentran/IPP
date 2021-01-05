@@ -7,7 +7,13 @@
             </button>
             <div class="slider p-col-12 p-grid" #reviewSlider>
                 <ng-template ngFor let-item [ngForOf]="reviewList">
-                    <fb-post class="content-box" attr.href="{{item.Url}}" width="350"></fb-post>
+                    <div class="content-box" *ngIf="!item.ShowScreenshot">
+                        <fb-post attr.href="{{item.Url}}" width="350"></fb-post>
+                    </div>
+                    <div class="content-box cursor-pointer" *ngIf="item.ShowScreenshot && item.ScreenshotUrl"
+                        (click)="goToReview(item.Url)">
+                        <img src="{{item.ScreenshotUrl}}" />
+                    </div>
                 </ng-template>
             </div>
             <button class="round-nav-button white-round-nav-button" (click)="scrollRight(reviewSlider)">

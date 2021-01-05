@@ -2,11 +2,11 @@
 
 .footer-container {
   background-color: $footer-background-color;
-  padding: $typical-padding 0;
+  padding: 20px 0;
   .footer-block {
     > * {
       font-size: $font-size-header-footer;
-      padding-bottom: 0.7em;
+      padding-bottom: 0.5em;
     }
     .header-text {
       font-weight: normal;
@@ -27,14 +27,14 @@
         font-size: $font-size-header-footer;
       }
       .header-text {
-        padding-bottom: 0.7em;
+        padding-bottom: 0.5em;
       }
-      .phone-number{
-        color: $white;
-        transition: opacity $button-transition-duration;
-        &:hover{
-          opacity: 0.7;
-        }
+    }
+    .footer-link {
+      color: $white;
+      transition: opacity $button-transition-duration;
+      &:hover {
+        opacity: 0.7;
       }
     }
     &.primary-block {

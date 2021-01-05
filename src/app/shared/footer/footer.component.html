@@ -5,18 +5,18 @@
                 <img src="/assets/image/IPP-logo-horizontal.png" />
             </div>
             <div class="p-col-5 p-grid p-nogutter p-justify-between">
-                <i class="fab fa-facebook p-col-4 social-icon"></i>
-                <i class="fab fa-youtube p-col-4 social-icon"></i>
-                <i class="fab fa-instagram p-col-4 social-icon"></i>
+                <i (click)="goToSocialPage(1)" class="fab fa-facebook p-col-4 social-icon footer-link"></i>
+                <i (click)="goToSocialPage(2)" class="fab fa-youtube p-col-4 social-icon footer-link"></i>
+                <i (click)="goToSocialPage(3)" class="fab fa-instagram p-col-4 social-icon footer-link"></i>
             </div>
             <div class="p-col-12 hotline-block">
                 <h1 class="header-text">{{"footer.hotline.header" | translate}}</h1>
                 <p>
-                    <a class="phone-number" href="tel: {{'footer.hotline.line1' | translate}}">
+                    <a class="footer-link" href="tel: {{'footer.hotline.line1' | translate}}">
                         {{"footer.hotline.line1" | translate}}
                     </a>
                     -
-                    <a class="phone-number" href="tel: {{'footer.hotline.line2' | translate}}">
+                    <a class="footer-link" href="tel: {{'footer.hotline.line2' | translate}}">
                         {{"footer.hotline.line2" | translate}}
                     </a>
                 </p>

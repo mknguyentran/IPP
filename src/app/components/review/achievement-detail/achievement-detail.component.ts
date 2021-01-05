@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AchievementResponse } from '@models';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 

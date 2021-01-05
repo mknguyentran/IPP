@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -20,6 +21,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
       },
       extend: true,
     }),
+    AnimateOnScrollModule.forRoot(),
   ],
 })
 export class HomeModule {}

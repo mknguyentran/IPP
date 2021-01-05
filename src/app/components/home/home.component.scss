@@ -107,9 +107,10 @@ $message-bubble-move-transition-duration: 1s;
   .brief-intro {
     .content {
       .impact-info {
-        margin-bottom: 10%;
+        margin-bottom: 6%;
         border-radius: 20px;
         padding: 20px 0;
+        transition: all 1s ease-in-out 1s;
         p {
           text-align: center;
           &.large {
@@ -137,7 +138,57 @@ $message-bubble-move-transition-duration: 1s;
           }
         }
         &.half-width {
-          width: 45%;
+          width: 47%;
+        }
+      }
+    }
+  }
+  .achievement {
+    padding: $typical-padding 0;
+    .header {
+      color: $bolder-primary-color;
+    }
+    .slider {
+      width: $content-width;
+      min-height: 327px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .content-box {
+        scroll-snap-align: end;
+        flex-shrink: 0;
+        margin-right: 75px;
+        width: 350px;
+        &.achievement-box {
+          position: relative;
+          transition: all $button-transition-duration;
+          height: 327px;
+          border: $review-box-border;
+          border-radius: $review-box-border-radius;
+          &:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: $black, $alpha: 0);
+            transition: background-color 0.2s;
+            content: "";
+          }
+          &:hover:before{
+            background-color: rgba($color: $black, $alpha: 0.2);
+          }
+          &.no-thumbnail {
+            background-color: $secondary-color;
+            color: $bolder-primary-color;
+            font-size: $font-size-header-footer;
+          }
         }
       }
     }

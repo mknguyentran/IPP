@@ -69,6 +69,7 @@ button.round-nav-button {
   border: none;
   width: 50px;
   height: 50px;
+  font-size: 25px;
   transition: box-shadow $button-transition-duration;
   fa-icon {
     width: 100%;
@@ -85,7 +86,9 @@ button.round-nav-button {
   }
   &.white-round-nav-button {
     background-color: $white;
-
+    .fas {
+      color: $bolder-primary-color;
+    }
     path {
       color: $bolder-primary-color;
     }
@@ -145,5 +148,5 @@ button.label-button {
 .white-floating-box {
   background-color: $white;
   border-radius: 10px;
-  box-shadow: -10px -10px 30px $white, 10px 10px 30px #ddd;
+  box-shadow: -10px -10px 40px $white, 10px 10px 40px #ddd;
 }

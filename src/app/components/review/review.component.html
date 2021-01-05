@@ -3,7 +3,7 @@
         <h1 class="header content-width">{{"reviewHeader" | translate}}</h1>
         <div class="p-grid p-nogutter p-align-center p-justify-between content-width-with-nav-button">
             <button class="round-nav-button white-round-nav-button" (click)="scrollLeft(reviewSlider)">
-                <fa-icon class="left-chevron" [icon]="chevronLeft"></fa-icon>
+                <i class="fas fa-chevron-left"></i>
             </button>
             <div class="slider p-col-12 p-grid" #reviewSlider>
                 <ng-template ngFor let-item [ngForOf]="reviewList">
@@ -17,7 +17,7 @@
                 </ng-template>
             </div>
             <button class="round-nav-button white-round-nav-button" (click)="scrollRight(reviewSlider)">
-                <fa-icon [icon]="chevronRight"></fa-icon>
+                <i class="fas fa-chevron-right"></i>
             </button>
         </div>
     </div>
@@ -25,7 +25,7 @@
         <h1 class="header content-width">{{"achievementHeader" | translate}}</h1>
         <div class="p-grid p-nogutter p-align-center p-justify-between content-width-with-nav-button">
             <button class="round-nav-button white-round-nav-button" (click)="scrollLeft(achievementSlider)">
-                <fa-icon class="left-chevron" [icon]="chevronLeft"></fa-icon>
+                <i class="fas fa-chevron-left"></i>
             </button>
             <div class="slider p-col-12 p-grid" #achievementSlider>
                 <div class="content-box achievement-box p-grid p-nogutter p-justify-center p-align-center"
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <button class="round-nav-button white-round-nav-button" (click)="scrollRight(achievementSlider)">
-                <fa-icon [icon]="chevronRight"></fa-icon>
+                <i class="fas fa-chevron-right"></i>
             </button>
         </div>
     </div>

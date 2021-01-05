@@ -26,6 +26,7 @@
     "@ngx-translate/http-loader": "^6.0.0",
     "aws-amplify": "^3.3.13",
     "aws-amplify-angular": "^5.0.42",
+    "ng2-animate-on-scroll": "^2.0.2",
     "ngx-facebook": "^3.0.0-0",
     "primeicons": "^4.0.0",
     "primeng": "^10.0.3",

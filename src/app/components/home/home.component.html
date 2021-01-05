@@ -49,7 +49,7 @@
             </div>
         </div>
     </div>
-    <div class="p-col-12 half-view-height brief-intro p-grid p-nogutter p-dir-col p-justify-between p-align-center">
+    <div class="p-col-12 brief-intro p-grid p-nogutter p-dir-col p-justify-between p-align-center">
         <div class="content content-width p-grid p-justify-between">
             <div class="p-col-6 p-col-nogutter p-grid p-nogutter p-dir-col p-align-center">
                 <div class="p-col-12">
@@ -59,22 +59,46 @@
                 </div>
             </div>
             <div class="p-col-5 p-grid p-nogutter p-justify-between p-col-nogutter">
-                <div class="half-width impact-info orange white-floating-box p-grid p-nogutter p-dir-col p-justify-between p-justify-end">
+                <div class="half-width impact-info orange p-grid p-nogutter p-dir-col p-justify-between p-justify-end"
+                    animateOnScroll animationName="white-floating-box" offset="200">
                     <p>&nbsp;</p>
                     <p class="large">3</p>
                     <p>cơ sở</p>
                 </div>
-                <div class="half-width impact-info purple white-floating-box p-grid p-nogutter p-dir-col p-justify-between">
+                <div class="half-width impact-info purple p-grid p-nogutter p-dir-col p-justify-between" animateOnScroll
+                    animationName="white-floating-box" offset="200">
                     <p>trên</p>
                     <p class="large">30</p>
                     <p>giáo viên</p>
                 </div>
-                <div class="p-col-12 impact-info red white-floating-box p-grid p-nogutter p-dir-col p-justify-between">
+                <div class="p-col-12 impact-info red p-grid p-nogutter p-dir-col p-justify-between" animateOnScroll
+                    animationName="white-floating-box" offset="200">
                     <p>trên</p>
                     <p class="large">1000</p>
                     <p>học viên</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="p-col-12 achievement p-grid p-justify-center p-nogutter">
+        <h1 class="header content-width">{{"achievementHeader" | translate}}</h1>
+        <div class="p-grid p-nogutter p-align-center p-justify-between content-width-with-nav-button">
+            <button class="round-nav-button white-round-nav-button" (click)="scrollLeft(achievementSlider)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slider p-col-12 p-grid" #achievementSlider>
+                <div class="content-box achievement-box p-grid p-nogutter p-justify-center p-align-center"
+                    *ngFor="let achievement of achievementList" [class.no-thumbnail]="!achievement.ThumbnailImageUrl"
+                    (click)="openAchievementDetail(achievement)">
+                    <img *ngIf="achievement.ThumbnailImageUrl; else elseblock" src="{{achievement.ThumbnailImageUrl}}">
+                    <ng-template #elseblock>
+                        {{achievement.StudentName}}
+                    </ng-template>
+                </div>
+            </div>
+            <button class="round-nav-button white-round-nav-button" (click)="scrollRight(achievementSlider)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
     </div>
 </div>

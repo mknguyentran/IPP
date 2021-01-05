@@ -1,10 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import smoothscroll from 'smoothscroll-polyfill';
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
 import { ReviewService } from '@apis';
 import { AchievementResponse, ReviewResponse } from '@models';
 import { takeUntil } from 'rxjs/operators';
@@ -20,8 +16,6 @@ import { AchievementDetailComponent } from './achievement-detail/achievement-det
   providers: [DialogService],
 })
 export class ReviewComponent extends BaseComponent implements OnInit {
-  chevronLeft = faChevronLeft;
-  chevronRight = faChevronRight;
   reviewList: ReviewResponse[] = new Array();
   achievementList: AchievementResponse[] = new Array();
   readonly scrollStep: number = 350 + 75;

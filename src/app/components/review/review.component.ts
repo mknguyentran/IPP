@@ -127,4 +127,8 @@ export class ReviewComponent extends BaseComponent implements OnInit {
       },
     });
   }
+
+  goToReview(url: string): void {
+    window.open(url);
+  }
 }

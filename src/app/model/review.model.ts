@@ -1,5 +1,7 @@
 export interface ReviewResponse {
   Url: string;
+  ScreenshotUrl?: string;
+  ShowScreenshot?: boolean;
   InputtedAt?: number;
 }
 

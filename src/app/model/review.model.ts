@@ -2,7 +2,7 @@ export interface ReviewResponse {
   Url: string;
   ScreenshotUrl?: string;
   ShowScreenshot?: boolean;
-  InputtedAt?: number;
+  PostedAt?: number;
 }
 
 export interface AchievementResponse {
@@ -18,7 +18,6 @@ export interface AchievementResponse {
   };
   DetailImage?: string[];
   ReviewUrl?: string;
-  ThumbnailImage?: any;
 }
 
 export interface ReviewRequest {

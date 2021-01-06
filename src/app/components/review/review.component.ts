@@ -68,10 +68,13 @@ export class ReviewComponent extends BaseComponent implements OnInit {
       .getReview()
       .pipe(takeUntil(this.destroy$))
       .subscribe((response) => {
-        // not yet
-        // this.reviewList = reviews.sort((a, b) => {
-        //   return a.InputtedAt - b.InputtedAt;
-        // });
+        this.reviewList = response.sort((a, b) => {
+          if (a.PostedAt && b.PostedAt) {
+            return b.PostedAt - a.PostedAt;
+          } else {
+            return -1;
+          }
+        });
         this.reviewList = response;
         this.initFacebook();
       });
